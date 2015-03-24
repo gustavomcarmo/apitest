@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="ServicoFixaTest" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="ServicoFixaSoapBinding" type="wsdl" bindingName="{ld:ServicoFixa/logical/ServicoFixa_ws}ServicoFixaSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://aldsp-soa/ServicosEnablementCatalogoFixa/ServicoFixa/logical/ServicoFixa.ws?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://aldsp-soa/ServicosEnablementCatalogoFixa/ServicoFixa/logical/ServicoFixa.ws?WSDL"><con:part><con:url>http://aldsp-soa/ServicosEnablementCatalogoFixa/ServicoFixa/logical/ServicoFixa.ws?WSDL</con:url><con:content><![CDATA[<definitions targetNamespace="ld:ServicoFixa/logical/ServicoFixa_ws" name="ServicoFixa" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="ld:ServicoFixa/logical/ServicoFixa_ws" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <documentation>AquaLogic Data Services Web Service</documentation>
+  <types>
+    <xs:schema targetNamespace="ld:ServicoFixa/logical/ServicoFixa_ws" elementFormDefault="qualified" xmlns:stns="ld:ServicoFixa/logical/ServicoFixa_ws" xmlns:dsns0="http://www.vivo.com.br/nfo/catalogoPRS/ServicoFixa">
+      <xs:import namespace="http://www.vivo.com.br/nfo/catalogoPRS/ServicoFixa"/>
+      <xs:element name="servicoFixa">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="parametros">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="dsns0:ParamServicoFixa"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="servicoFixaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dsns0:ResultServicoFixa" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoWeb/FN_BUSCARSOLICITACAOCOMERCIAL" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.vivo.com.br/SN/CatalogoWeb/FN_BUSCARSOLICITACAOCOMERCIAL">
+      <xsd:element name="FN_BUSCARSOLICITACAOCOMERCIAL">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="IDSOLICITACAOCOMERCIAL" type="xsd:int"/>
+            <xsd:element name="CDSOLICITACAOCOMERCIAL" type="xsd:string"/>
+            <xsd:element name="NMOPERACAOCOMERCIAL" type="xsd:string"/>
+            <xsd:element name="INOFERTACLIENTEINADIMPLENTE" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="PZDIASMAXIMOATENDIMENTO" type="xsd:int"/>
+            <xsd:element name="PZMESVALIDADEPARQUE" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS/ServicoFixa" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pag="http://www.vivo.com.br/nfo/catalogoWEB" xmlns:tns="http://www.vivo.com.br/nfo/catalogoPRS/ServicoFixa">
+      <xsd:element name="ParamServicoFixa">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdCanalAtendimento" type="xsd:int"/>
+            <xsd:element name="cdSistemaOrigem" type="xsd:int"/>
+            <xsd:element name="cdTipoServico" type="xsd:int"/>
+            <xsd:element name="cdTipoSolicitacaoComercial" type="xsd:int"/>
+            <xsd:element name="cdClasseLinha" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="cdGrupoComercial" type="xsd:string"/>
+            <xsd:choice>
+              <xsd:element name="cdFamiliaServico" type="xsd:int" minOccurs="0"/>
+              <xsd:element name="cdCategoriaServico" type="xsd:int" minOccurs="0"/>
+            </xsd:choice>
+            <xsd:element name="cdCNL" type="xsd:string"/>
+            <xsd:element name="cdServicoFiltro" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="nmServicoFiltro" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="inPacote" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="S"/>
+                  <xsd:enumeration value="N"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="inOfertaClientesInadimplentes" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="S"/>
+                  <xsd:enumeration value="N"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="inOrdenacaoValorAssinaturaMensal" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="crescente"/>
+                  <xsd:enumeration value="decrescente"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="listaTipoTecnologia" type="tns:ListaTipoTecnologia" minOccurs="0"/>
+            <xsd:element name="inVigenciaServico" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:int">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                  <xsd:enumeration value="3"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="analiseCredito" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="cdScore" type="xsd:string"/>
+                  <xsd:element name="inStatusAnaliseCredito" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="paginacao" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="pagina" type="xsd:int"/>
+                  <xsd:element name="quantidadePorPagina" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ListaTipoTecnologia">
+        <xsd:sequence>
+          <xsd:element name="tipoTecnologia" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="codigo" type="xsd:string"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoWeb/FN_BUSCARSERVICOFIXA" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.vivo.com.br/SN/CatalogoWeb/FN_BUSCARSERVICOFIXA">
+      <xsd:element name="FN_BUSCARSERVICOFIXA">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="IDSISTEMASERVICO" type="xsd:int"/>
+            <xsd:element name="CDCODIGO" type="xsd:string"/>
+            <xsd:element name="CDCLASSESERVICOADICIONAL" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="CDTIPOEQUIPAMENTO" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="INPOLITICAPRCLEGADO" type="xsd:boolean" minOccurs="0"/>
+            <!--Ainda não está aplicado-->
+            <xsd:element name="INPREFACTIBILIDADE" type="xsd:boolean" minOccurs="0"/>
+            <xsd:element name="INPOSFACTIBILIDADE" type="xsd:boolean" minOccurs="0"/>
+            <xsd:element name="QTPERCENTUALAUDITORIA" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="CDSISCOM" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="VLORDEMATND" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="NMCOMERCIAL" type="xsd:string"/>
+            <xsd:element name="DESCRICAO" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="DSNOTA" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="CDNATUREZAPEDIDO" type="xsd:string" minOccurs="0"/>
+            <!--Verificar com Paulo, pois acredito que deveria estar dentro do tipo 'solicitacoesComerciais'-->
+            <xsd:element name="INDISPONIVEL" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="CDTIPOSERVICO" type="xsd:int"/>
+            <xsd:element name="DSCTIPOSERVICO" type="xsd:string"/>
+            <xsd:element name="CDFAMILIA" type="xsd:int"/>
+            <xsd:element name="DSFAMILIA" type="xsd:string"/>
+            <xsd:element name="CDCATEGORIA" type="xsd:int"/>
+            <xsd:element name="DSCATEGORIA" type="xsd:string"/>
+            <xsd:element name="SGTECNOLOGIA" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="INATRIBUTOSERVICO" type="xsd:boolean"/>
+            <xsd:element name="IDSISTEMA" type="xsd:int"/>
+            <xsd:element name="NUORDEMATENDIMENTO" type="xsd:int" minOccurs="0"/>
+            <!--Verificar com Paulo, pois até o momento o campo não está especificado-->
+            <xsd:element name="INSTATUSANALISECREDITO" type="xsd:int" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoWeb/FN_BUSCARTARIFA" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.vivo.com.br/SN/CatalogoWeb/FN_BUSCARTARIFA">
+      <xsd:element name="FN_BUSCARTARIFA">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CDTARIFA" type="xsd:string"/>
+            <xsd:element name="VLPRAZONAOFATURAMENTO" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="CDTPTARIFA" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="DSCTARIFA" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="VLTARIFA" type="xsd:double" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS/ServicoFixa" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pag="http://www.vivo.com.br/nfo/catalogoWEB" xmlns:tns="http://www.vivo.com.br/nfo/catalogoPRS/ServicoFixa">
+      <xsd:element name="ResultServicoFixa">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codigo" type="xsd:int"/>
+            <xsd:element name="descricao" type="xsd:string"/>
+            <xsd:element name="servicos" type="tns:ListaServicoDisponivel" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ListaServicoDisponivel">
+        <xsd:sequence>
+          <xsd:element name="servicoDisponivel" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdServico" type="xsd:string"/>
+                <xsd:element name="cdClasseServicoAdicional" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="cdAtributoClasseAdicional" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="inPrecificacaoLegado" type="xsd:boolean" minOccurs="0"/>
+                <xsd:element name="inPreFactibilidade" type="xsd:boolean" minOccurs="0"/>
+                <xsd:element name="inPosFactibilidade" type="xsd:boolean" minOccurs="0"/>
+                <xsd:element name="vlPercentualServicosAuditaveis" type="xsd:decimal" minOccurs="0"/>
+                <xsd:element name="cdSyscom" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="nmServico" type="xsd:string"/>
+                <xsd:element name="dsServico" type="xsd:string"/>
+                <xsd:element name="dsNota" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="cdNaturezaPedido" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="inVigenciaServico" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="cdTipoServico" type="xsd:int"/>
+                <xsd:element name="dsTipoServico" type="xsd:string"/>
+                <xsd:element name="cdFamiliaServico" type="xsd:int"/>
+                <xsd:element name="dsFamiliaServico" type="xsd:string"/>
+                <xsd:element name="cdCategoriaServico" type="xsd:int"/>
+                <xsd:element name="dsCategoriaServico" type="xsd:string"/>
+                <xsd:element name="cdTipoTecnologiaFixa" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="solicitacoesComerciais" type="tns:ListaSolicitacaoComercial" minOccurs="0"/>
+                <xsd:element name="inAtributoServico" type="xsd:boolean"/>
+                <xsd:element name="cdSistemaOrigem" type="xsd:int"/>
+                <xsd:element name="sequenciaPedido" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="inStatusAnaliseCredito" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="inDescontoServico" type="xsd:boolean" minOccurs="0"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaSolicitacaoComercial">
+        <xsd:sequence>
+          <xsd:element name="solicitacaoComercial" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdSolicitacaoComercial" type="xsd:string"/>
+                <xsd:element name="nmOperacaoComercial" type="xsd:string"/>
+                <xsd:element name="inOfertaClientesInadimplentes" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="vlPrazoMaximoAtendimento" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="vlPrazoVigenciaProduto" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="tarifas" type="tns:ListaTarifa" minOccurs="0"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaTarifa">
+        <xsd:sequence>
+          <xsd:element name="tarifa" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdTarifa" type="xsd:string"/>
+                <xsd:element name="vlPrazoNaoFaturamento" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="cdTipoTarifa" type="xsd:string"/>
+                <xsd:element name="dsTarifa" type="xsd:string"/>
+                <xsd:element name="vlTarifa" type="xsd:double" minOccurs="0"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="servicoFixaIn">
+    <part name="parameters" element="tns:servicoFixa"/>
+  </message>
+  <message name="servicoFixaOut">
+    <part name="parameters" element="tns:servicoFixaResponse"/>
+  </message>
+  <portType name="ServicoFixaPT">
+    <operation name="servicoFixa">
+      <input message="tns:servicoFixaIn"/>
+      <output message="tns:servicoFixaOut"/>
+    </operation>
+  </portType>
+  <binding name="ServicoFixaSoapBinding" type="tns:ServicoFixaPT">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="servicoFixa">
+      <soap:operation soapAction="ld:ServicoFixa/logical/ServicoFixa_ws/servicoFixa" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicoFixaSoapService">
+    <port binding="tns:ServicoFixaSoapBinding" name="ServicoFixaSoapPort">
+      <soap:address location="http://aldsp-soa:80/ServicosEnablementCatalogoFixa/ALDSPWebService/ServicoFixa/logical/ServicoFixa.ws"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoFixa/ALDSPWebService/ServicoFixa/logical/ServicoFixa.ws</con:endpoint></con:endpoints><con:operation isOneWay="false" action="ld:ServicoFixa/logical/ServicoFixa_ws/servicoFixa" name="servicoFixa" bindingOperationName="servicoFixa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="ServicoFixaRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoFixa/ALDSPWebService/ServicoFixa/logical/ServicoFixa.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="ld:ServicoFixa/logical/ServicoFixa_ws" xmlns:ser1="http://www.vivo.com.br/nfo/catalogoPRS/ServicoFixa">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:servicoFixa>
+         <ser:parametros>
+            <ser1:ParamServicoFixa>
+               <ser1:cdCanalAtendimento>2</ser1:cdCanalAtendimento>
+               <ser1:cdSistemaOrigem>8</ser1:cdSistemaOrigem>
+               <ser1:cdTipoServico>1</ser1:cdTipoServico>
+               <ser1:cdTipoSolicitacaoComercial>1</ser1:cdTipoSolicitacaoComercial>
+               <ser1:cdGrupoComercial>506</ser1:cdGrupoComercial>
+               <ser1:cdCategoriaServico>68</ser1:cdCategoriaServico>
+               <ser1:cdCNL>0</ser1:cdCNL>
+            </ser1:ParamServicoFixa>
+         </ser:parametros>
+      </ser:servicoFixa>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:ServicoFixa/logical/ServicoFixa_ws/servicoFixa"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="ServicoFixaTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ServicoFixaTestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ServicoFixaRequestTest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicoFixaSoapBinding</con:interface><con:operation>servicoFixa</con:operation><con:request name="ServicoFixaRequestTest" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoFixa/ALDSPWebService/ServicoFixa/logical/ServicoFixa.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="ld:ServicoFixa/logical/ServicoFixa_ws" xmlns:ser1="http://www.vivo.com.br/nfo/catalogoPRS/ServicoFixa">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:servicoFixa>
+         <ser:parametros>
+            <ser1:ParamServicoFixa>
+               <ser1:cdCanalAtendimento>2</ser1:cdCanalAtendimento>
+               <ser1:cdSistemaOrigem>8</ser1:cdSistemaOrigem>
+               <ser1:cdTipoServico>1</ser1:cdTipoServico>
+               <ser1:cdTipoSolicitacaoComercial>1</ser1:cdTipoSolicitacaoComercial>
+               <ser1:cdGrupoComercial>506</ser1:cdGrupoComercial>
+               <ser1:cdCategoriaServico>68</ser1:cdCategoriaServico>
+               <ser1:cdCNL>0</ser1:cdCNL>
+            </ser1:ParamServicoFixa>
+         </ser:parametros>
+      </ser:servicoFixa>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:ServicoFixa/logical/ServicoFixa_ws/servicoFixa"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

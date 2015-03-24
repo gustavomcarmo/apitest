@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="VoipTest" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="VoipSoapBinding" type="wsdl" bindingName="{ld:logical/Voip/Voip_ws}VoipSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/Voip/Voip.ws?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/Voip/Voip.ws?WSDL"><con:part><con:url>http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/Voip/Voip.ws?WSDL</con:url><con:content><![CDATA[<definitions targetNamespace="ld:logical/Voip/Voip_ws" name="Voip" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="ld:logical/Voip/Voip_ws" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <documentation>AquaLogic Data Services Web Service</documentation>
+  <types>
+    <xs:schema targetNamespace="ld:logical/Voip/Voip_ws" elementFormDefault="qualified" xmlns:stns="ld:logical/Voip/Voip_ws" xmlns:dsns0="http://www.vivo.com.br/nfo/catalogoPRS/Voip">
+      <xs:import namespace="http://www.vivo.com.br/nfo/catalogoPRS/Voip"/>
+      <xs:element name="buscarPlanosServicosVoip">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="parametros">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="dsns0:ParametrosBuscarPlanosServicosVoip"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="buscarPlanosServicosVoipResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dsns0:ResultadoBuscarPlanosServicosVoip"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema targetNamespace="ld:physical/BSC_PLANO" elementFormDefault="qualified" xmlns:xdt="http://www.w3.org/2004/07/xpath-datatypes" xmlns:tns="ld:physical/BSC_PLANO">
+      <xs:element name="RETURN_VALUE_ROW">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="LINHA" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="CDPLANO" type="xs:string" minOccurs="0"/>
+            <xs:element name="NMPLANO" type="xs:string" minOccurs="0"/>
+            <xs:element name="SGTIPOASSINATURA" type="xs:string" minOccurs="0"/>
+            <xs:element name="NMTIPOPLANO" type="xs:string" minOccurs="0"/>
+            <xs:element name="SGTIPOPLANO" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema targetNamespace="ld:physical/BSC_SRV_FIXA" elementFormDefault="qualified" xmlns:xdt="http://www.w3.org/2004/07/xpath-datatypes" xmlns:tns="ld:physical/BSC_SRV_FIXA">
+      <xs:element name="RETURN_VALUE_ROW">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="LINHA" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="IDSERVICO" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="IDCANALVENDA" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="CDSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="NMSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDTIPOSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSTIPOSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDCLASSESERVICOPRINCIPAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDCLASSESERVICOADICIONAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDTIPOEQUIPAMENTO" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS/Voip" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.vivo.com.br/nfo/catalogoPRS/Voip">
+      <xsd:element name="ResultadoBuscarPlanosServicosVoip">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codigo" type="xsd:string"/>
+            <xsd:element name="descricao" type="xsd:string"/>
+            <xsd:element name="cdScore" type="xsd:string"/>
+            <xsd:element name="planos" type="tns:ListaPlanosDisponiveis" minOccurs="0"/>
+            <xsd:element name="servicos" type="tns:ListaServicosDisponiveis" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ListaPlanosDisponiveis">
+        <xsd:sequence>
+          <xsd:element name="plano" minOccurs="0" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdPlano" type="xsd:string"/>
+                <xsd:element name="nmPlano" type="xsd:string"/>
+                <xsd:element name="sgTipoAssinatura" type="xsd:string"/>
+                <xsd:element name="nmTipoPlano" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="sgTipoPlano" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaServicosDisponiveis">
+        <xsd:sequence>
+          <xsd:element name="servico" minOccurs="0" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdServico" type="xsd:string"/>
+                <xsd:element name="nmServico" type="xsd:string"/>
+                <xsd:element name="dsServico" type="xsd:string"/>
+                <xsd:element name="cdTipoServico" type="xsd:string"/>
+                <xsd:element name="dsTipoServico" type="xsd:string"/>
+                <xsd:element name="cdClasseServicoPrincipal" type="xsd:string"/>
+                <xsd:element name="cdClasseServicoAdicional" type="xsd:string"/>
+                <xsd:element name="cdTipoEquipamento" type="xsd:string"/>
+                <xsd:element name="listaSolicitacoComercial" type="tns:ListaSolicitacaoComercial" minOccurs="0"/>
+                <xsd:element name="servicosBandaLarga" type="tns:ListaServicosBandaLarga" minOccurs="0"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaServicosBandaLarga">
+        <xsd:sequence>
+          <xsd:element name="servicoBandaLarga" minOccurs="0" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdServico" type="xsd:string"/>
+                <xsd:element name="nmServico" type="xsd:string"/>
+                <xsd:element name="dsServico" type="xsd:string"/>
+                <xsd:element name="cdTipoServico" type="xsd:string"/>
+                <xsd:element name="dsTipoServico" type="xsd:string"/>
+                <xsd:element name="cdTipoTecnologiaFixa" type="xsd:string"/>
+                <xsd:element name="cdClasseServicoAdicional" type="xsd:string"/>
+                <xsd:element name="cdTipoEquipamento" type="xsd:string"/>
+                <xsd:element name="listaSolicitacoComercial" type="tns:ListaSolicitacaoComercial" minOccurs="0"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaSolicitacaoComercial">
+        <xsd:sequence>
+          <xsd:element name="solicitacaoComercial" minOccurs="0" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdSolicitacaoComercial" type="xsd:string"/>
+                <xsd:element name="nmSolicitacaoComercial" type="xsd:string"/>
+                <xsd:element name="nmOperacaoComercial" type="xsd:string"/>
+                <xsd:element name="cdTipoSolicitacaoComercial" type="xsd:string"/>
+                <xsd:element name="nmTipoSolicitacaoComercial" type="xsd:string"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="PaginacaoIn">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="itensPorPagina" type="xsd:long"/>
+            <xsd:element name="paginaSolicitada" type="xsd:long"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema targetNamespace="ld:physical/BSC_SRV_SLCTCOMERCIAL" elementFormDefault="qualified" xmlns:xdt="http://www.w3.org/2004/07/xpath-datatypes" xmlns:tns="ld:physical/BSC_SRV_SLCTCOMERCIAL">
+      <xs:element name="RETURN_VALUE_ROW">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CDSOLICITACAOCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="NMSOLICITACAOCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="NMOPERACAOCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDTIPOSOLICITACAOCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="NMTIPOSOLICITACAOCOMERCIAL" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS/Voip" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.vivo.com.br/nfo/catalogoPRS" xmlns:pag="http://www.vivo.com.br/SN/CatalogoPlano">
+      <xsd:import namespace="http://www.vivo.com.br/SN/CatalogoPlano"/>
+      <xsd:element name="ParametrosBuscarPlanosServicosVoip">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdGrupoComercial" type="xsd:string"/>
+            <xsd:element name="cdClasseServicoPrincipal" type="xsd:string"/>
+            <xsd:element name="sgTpAssinatura" type="xsd:string"/>
+            <xsd:element name="cdScore" type="xsd:string"/>
+            <xsd:element name="idCanalAtendimento" type="xsd:integer" minOccurs="0"/>
+            <xsd:element ref="pag:PaginacaoIn" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema targetNamespace="ld:physical/BSC_SRV_BANDALARGA" elementFormDefault="qualified" xmlns:xdt="http://www.w3.org/2004/07/xpath-datatypes" xmlns:tns="ld:physical/BSC_SRV_BANDALARGA">
+      <xs:element name="RETURN_VALUE_ROW">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="IDSERVICO" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="IDCANALVENDA" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="CDSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="NMSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDTIPOSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSTIPOSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDTIPOTECNOLOGIAFIXA" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDCLASSESERVICOADICIONAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDTIPOEQUIPAMENTO" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="buscarPlanosServicosVoipIn">
+    <part name="parameters" element="tns:buscarPlanosServicosVoip"/>
+  </message>
+  <message name="buscarPlanosServicosVoipOut">
+    <part name="parameters" element="tns:buscarPlanosServicosVoipResponse"/>
+  </message>
+  <portType name="VoipPT">
+    <operation name="buscarPlanosServicosVoip">
+      <input message="tns:buscarPlanosServicosVoipIn"/>
+      <output message="tns:buscarPlanosServicosVoipOut"/>
+    </operation>
+  </portType>
+  <binding name="VoipSoapBinding" type="tns:VoipPT">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="buscarPlanosServicosVoip">
+      <soap:operation soapAction="ld:logical/Voip/Voip_ws/buscarPlanosServicosVoip" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="VoipSoapService">
+    <port binding="tns:VoipSoapBinding" name="VoipSoapPort">
+      <soap:address location="http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/Voip/Voip.ws"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/Voip/Voip.ws</con:endpoint></con:endpoints><con:operation isOneWay="false" action="ld:logical/Voip/Voip_ws/buscarPlanosServicosVoip" name="buscarPlanosServicosVoip" bindingOperationName="buscarPlanosServicosVoip" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="VoipRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/Voip/Voip.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:voip="ld:logical/Voip/Voip_ws" xmlns:voip1="http://www.vivo.com.br/nfo/catalogoPRS/Voip" xmlns:cat="http://www.vivo.com.br/SN/CatalogoPlano">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <voip:buscarPlanosServicosVoip>
+         <voip:parametros>
+            <voip1:ParametrosBuscarPlanosServicosVoip>
+               <voip1:cdGrupoComercial>158</voip1:cdGrupoComercial>
+               <voip1:cdClasseServicoPrincipal>LIRJ</voip1:cdClasseServicoPrincipal>
+               <voip1:sgTpAssinatura>J</voip1:sgTpAssinatura>
+               <voip1:cdScore>08</voip1:cdScore>
+            </voip1:ParametrosBuscarPlanosServicosVoip>
+         </voip:parametros>
+      </voip:buscarPlanosServicosVoip>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:logical/Voip/Voip_ws/buscarPlanosServicosVoip"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="VoipTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="VoipTestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="VoipRequestTest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>VoipSoapBinding</con:interface><con:operation>buscarPlanosServicosVoip</con:operation><con:request name="VoipRequestTest" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/Voip/Voip.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:voip="ld:logical/Voip/Voip_ws" xmlns:voip1="http://www.vivo.com.br/nfo/catalogoPRS/Voip" xmlns:cat="http://www.vivo.com.br/SN/CatalogoPlano">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <voip:buscarPlanosServicosVoip>
+         <voip:parametros>
+            <voip1:ParametrosBuscarPlanosServicosVoip>
+               <voip1:cdGrupoComercial>158</voip1:cdGrupoComercial>
+               <voip1:cdClasseServicoPrincipal>LIRJ</voip1:cdClasseServicoPrincipal>
+               <voip1:sgTpAssinatura>J</voip1:sgTpAssinatura>
+               <voip1:cdScore>08</voip1:cdScore>
+            </voip1:ParametrosBuscarPlanosServicosVoip>
+         </voip:parametros>
+      </voip:buscarPlanosServicosVoip>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:logical/Voip/Voip_ws/buscarPlanosServicosVoip"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

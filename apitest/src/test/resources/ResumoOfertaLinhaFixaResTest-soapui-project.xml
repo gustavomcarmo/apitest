@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="ResumoOfertaLinhaFixaResTest" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="ResumoOfertaLinhaFixaResSoapBinding" type="wsdl" bindingName="{ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws}ResumoOfertaLinhaFixaResSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws?WSDL"><con:part><con:url>http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws?WSDL</con:url><con:content><![CDATA[<definitions targetNamespace="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws" name="ResumoOfertaLinhaFixaRes" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <documentation>AquaLogic Data Services Web Service</documentation>
+  <types>
+    <xs:schema targetNamespace="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws" elementFormDefault="qualified" xmlns:stns="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws" xmlns:dsns0="http://www.vivo.com.br/nfo/catalogoPRS/ResumoOfertaLinhaFixaRes">
+      <xs:import namespace="http://www.vivo.com.br/nfo/catalogoPRS/ResumoOfertaLinhaFixaRes"/>
+      <xs:element name="resumoOfertaLinhaFixaRes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="parametros">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="dsns0:ParamResumoOfertaLinhaFixaRes"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="resumoOfertaLinhaFixaResResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dsns0:ResultResumoOfertaLinhaFixaRes" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS/ResumoOfertaLinhaFixaRes" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pag="http://www.vivo.com.br/nfo/catalogoWEB" xmlns:tns="http://www.vivo.com.br/nfo/catalogoPRS/ResumoOfertaLinhaFixaRes">
+      <xsd:element name="ParamResumoOfertaLinhaFixaRes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cdGrupoComercial" type="xsd:string"/>
+            <xsd:element name="cdCNL" type="xsd:int"/>
+            <xsd:element name="inOfertaConvergenteCobre" type="xsd:boolean"/>
+            <xsd:element name="inOfertaConvergenteFibra" type="xsd:boolean"/>
+            <xsd:element name="inOfertaSpeedySoloCobre" type="xsd:boolean"/>
+            <xsd:element name="inOfertaSpeedySoloFibra" type="xsd:boolean"/>
+            <xsd:element name="inOfertaPortabilidade" type="xsd:boolean"/>
+            <xsd:element name="inFWT" type="xsd:boolean"/>
+            <xsd:element name="inFATB" type="xsd:boolean"/>
+            <xsd:element name="inOfertaClientesInadimplentes" type="xsd:boolean"/>
+            <xsd:element name="inOfertaBasePontual" type="xsd:boolean"/>
+            <xsd:element name="dtPedido" type="xsd:date" minOccurs="0"/>
+            <xsd:element name="servicosStatus" type="tns:ListaServicosStatus" minOccurs="0"/>
+            <xsd:element name="cdScore" type="xsd:string"/>
+            <xsd:element name="paginacao" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="pagina" type="xsd:int"/>
+                  <xsd:element name="quantidadePorPagina" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ListaServicosStatus">
+        <xsd:sequence>
+          <xsd:element name="servicoStatus" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdServico" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="cdTipoAlta" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="dsTipoAlta" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="listaDocumentos" type="tns:ListaDocumentos" minOccurs="0"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaDocumentos">
+        <xsd:sequence>
+          <xsd:element name="documento" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdDocumento" type="xsd:string"/>
+                <xsd:element name="nomeDocumento" type="xsd:string"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xs:schema targetNamespace="ld:ResumoOfertaLinhaFixaRes/physical/FN_OBTER_OFERTAFIXA_DISPONIVEL" xmlns:xdt="http://www.w3.org/2004/07/xpath-datatypes" xmlns:tns="ld:ResumoOfertaLinhaFixaRes/physical/FN_OBTER_OFERTAFIXA_DISPONIVEL">
+      <xs:element name="FN_OBTER_OFERTAFIXA_DISPONIVEL">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RETURN_VALUE" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="tns:RETURN_VALUE_ROW" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="P_CDERRO" type="xs:string" minOccurs="0"/>
+            <xs:element name="P_DSERRO" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RETURN_VALUE_ROW">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CDOFERTAFIXA" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSOFERTAFIXA" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDPRIORIDADE" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="INSPEEDYSOLOCOBRE" type="xs:string" minOccurs="0"/>
+            <xs:element name="INSPEEDYSOLOFIBRA" type="xs:string" minOccurs="0"/>
+            <xs:element name="INCONVERGENTECOBRE" type="xs:string" minOccurs="0"/>
+            <xs:element name="INCONVERGENTEFIBRA" type="xs:string" minOccurs="0"/>
+            <xs:element name="INOFERTACOMPLEMENTAR" type="xs:string" minOccurs="0"/>
+            <xs:element name="INFATB" type="xs:string" minOccurs="0"/>
+            <xs:element name="INOFERTACLIENTEINADIMPLENTE" type="xs:string" minOccurs="0"/>
+            <xs:element name="INBASEPONTUAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDSOLICITACAOCOMERCIALLINHA" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="IDSOLICITACAOCOMERCIALPRECAD" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="IDSOLICITACAOCOMERCIALPLANO" type="xs:decimal" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS/ResumoOfertaLinhaFixaRes" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pag="http://www.vivo.com.br/nfo/catalogoWEB" xmlns:tns="http://www.vivo.com.br/nfo/catalogoPRS/ResumoOfertaLinhaFixaRes">
+      <xsd:element name="ResultResumoOfertaLinhaFixaRes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codigo" type="xsd:int"/>
+            <xsd:element name="descricao" type="xsd:string"/>
+            <xsd:element name="ofertas" type="tns:ListaOferta" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ListaOferta">
+        <xsd:sequence>
+          <xsd:element name="oferta" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdOferta" type="xsd:string"/>
+                <xsd:element name="dsOferta" type="xsd:string"/>
+                <xsd:element name="cdPrioridade" type="xsd:int"/>
+                <xsd:element name="inOfertaSpeedySoloCobre" type="xsd:boolean"/>
+                <xsd:element name="inOfertaSpeedySoloFibra" type="xsd:boolean"/>
+                <xsd:element name="inOfertaConvergenteCobre" type="xsd:boolean"/>
+                <xsd:element name="inOfertaConvergenteFibra" type="xsd:boolean"/>
+                <xsd:element name="inOfertaComplementar" type="xsd:boolean"/>
+                <xsd:element name="inFATB" type="xsd:boolean"/>
+                <xsd:element name="inOfertaClientesInadimplentes" type="xsd:boolean"/>
+                <xsd:element name="inOfertaBasePontual" type="xsd:boolean"/>
+                <xsd:element name="solicitacaoComercialLinhaNormal" type="tns:SolicitacaoComercial"/>
+                <xsd:element name="solicitacaoComercialLinhaPreCad" type="tns:SolicitacaoComercial" minOccurs="0"/>
+                <xsd:element name="solicitacaoComercialPlano" type="tns:SolicitacaoComercial"/>
+                <xsd:element name="cdTipoAlta" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="dsTipoAlta" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="listaDocumentos" type="tns:ListaDocumentosOut" minOccurs="0"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SolicitacaoComercial">
+        <xsd:sequence>
+          <xsd:element name="cdSolicitacaoComercial" type="xsd:string"/>
+          <xsd:element name="nmSolicitacaoComercial" type="xsd:string"/>
+          <xsd:element name="cdServico" type="xsd:string"/>
+          <xsd:element name="nmServico" type="xsd:string"/>
+          <xsd:element name="cdSistemaOrigem" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaDocumentosOut">
+        <xsd:sequence>
+          <xsd:element name="documento" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="cdDocumento" type="xsd:string"/>
+                <xsd:element name="nomeDocumento" type="xsd:string"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xs:schema targetNamespace="ld:ResumoOfertaLinhaFixaRes/physical/FN_OBTER_SOLICITACAOCOMERCIAL" xmlns:xdt="http://www.w3.org/2004/07/xpath-datatypes" xmlns:tns="ld:ResumoOfertaLinhaFixaRes/physical/FN_OBTER_SOLICITACAOCOMERCIAL">
+      <xs:element name="RETURN_VALUE_ROW">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CDSOLICITACAOCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="NMSOLICITACAOCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDCODIGO" type="xs:string" minOccurs="0"/>
+            <xs:element name="NMCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDSISTEMA" type="xs:decimal" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="resumoOfertaLinhaFixaResIn">
+    <part name="parameters" element="tns:resumoOfertaLinhaFixaRes"/>
+  </message>
+  <message name="resumoOfertaLinhaFixaResOut">
+    <part name="parameters" element="tns:resumoOfertaLinhaFixaResResponse"/>
+  </message>
+  <portType name="ResumoOfertaLinhaFixaResPT">
+    <operation name="resumoOfertaLinhaFixaRes">
+      <input message="tns:resumoOfertaLinhaFixaResIn"/>
+      <output message="tns:resumoOfertaLinhaFixaResOut"/>
+    </operation>
+  </portType>
+  <binding name="ResumoOfertaLinhaFixaResSoapBinding" type="tns:ResumoOfertaLinhaFixaResPT">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="resumoOfertaLinhaFixaRes">
+      <soap:operation soapAction="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws/resumoOfertaLinhaFixaRes" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="ResumoOfertaLinhaFixaResSoapService">
+    <port binding="tns:ResumoOfertaLinhaFixaResSoapBinding" name="ResumoOfertaLinhaFixaResSoapPort">
+      <soap:address location="http://aldsp-soa:80/ServicosEnablementCatalogoLinhaFixa/ALDSPWebService/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoLinhaFixa/ALDSPWebService/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws</con:endpoint></con:endpoints><con:operation isOneWay="false" action="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws/resumoOfertaLinhaFixaRes" name="resumoOfertaLinhaFixaRes" bindingOperationName="resumoOfertaLinhaFixaRes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="ResumoOfertaLinhaFixaResRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoLinhaFixa/ALDSPWebService/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:res="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws" xmlns:res1="http://www.vivo.com.br/nfo/catalogoPRS/ResumoOfertaLinhaFixaRes">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <res:resumoOfertaLinhaFixaRes>
+         <res:parametros>
+            <res1:ParamResumoOfertaLinhaFixaRes>
+               <res1:cdGrupoComercial>685</res1:cdGrupoComercial>
+               <res1:cdCNL>11000</res1:cdCNL>
+               <res1:inOfertaConvergenteCobre>false</res1:inOfertaConvergenteCobre>
+               <res1:inOfertaConvergenteFibra>false</res1:inOfertaConvergenteFibra>
+               <res1:inOfertaSpeedySoloCobre>false</res1:inOfertaSpeedySoloCobre>
+               <res1:inOfertaSpeedySoloFibra>false</res1:inOfertaSpeedySoloFibra>
+               <res1:inOfertaPortabilidade>false</res1:inOfertaPortabilidade>
+               <res1:inFWT>false</res1:inFWT>
+               <res1:inFATB>false</res1:inFATB>
+               <res1:inOfertaClientesInadimplentes>false</res1:inOfertaClientesInadimplentes>
+               <res1:inOfertaBasePontual>false</res1:inOfertaBasePontual>
+               <res1:cdScore>09</res1:cdScore>
+            </res1:ParamResumoOfertaLinhaFixaRes>
+         </res:parametros>
+      </res:resumoOfertaLinhaFixaRes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws/resumoOfertaLinhaFixaRes"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="ResumoOfertaLinhaFixaResTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ResumoOfertaLinhaFixaResTestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ResumoOfertaLinhaFixaResRequestTest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ResumoOfertaLinhaFixaResSoapBinding</con:interface><con:operation>resumoOfertaLinhaFixaRes</con:operation><con:request name="ResumoOfertaLinhaFixaResRequestTest" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoLinhaFixa/ALDSPWebService/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:res="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws" xmlns:res1="http://www.vivo.com.br/nfo/catalogoPRS/ResumoOfertaLinhaFixaRes">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <res:resumoOfertaLinhaFixaRes>
+         <res:parametros>
+            <res1:ParamResumoOfertaLinhaFixaRes>
+               <res1:cdGrupoComercial>685</res1:cdGrupoComercial>
+               <res1:cdCNL>11000</res1:cdCNL>
+               <res1:inOfertaConvergenteCobre>false</res1:inOfertaConvergenteCobre>
+               <res1:inOfertaConvergenteFibra>false</res1:inOfertaConvergenteFibra>
+               <res1:inOfertaSpeedySoloCobre>false</res1:inOfertaSpeedySoloCobre>
+               <res1:inOfertaSpeedySoloFibra>false</res1:inOfertaSpeedySoloFibra>
+               <res1:inOfertaPortabilidade>false</res1:inOfertaPortabilidade>
+               <res1:inFWT>false</res1:inFWT>
+               <res1:inFATB>false</res1:inFATB>
+               <res1:inOfertaClientesInadimplentes>false</res1:inOfertaClientesInadimplentes>
+               <res1:inOfertaBasePontual>false</res1:inOfertaBasePontual>
+               <res1:cdScore>09</res1:cdScore>
+            </res1:ParamResumoOfertaLinhaFixaRes>
+         </res:parametros>
+      </res:resumoOfertaLinhaFixaRes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes_ws/resumoOfertaLinhaFixaRes"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

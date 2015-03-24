@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="DetalhePlanoTest" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DetalhePlanoSoapBinding" type="wsdl" bindingName="{ld:logical/DetalhePlano/DetalhePlano_ws}DetalhePlanoSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/DetalhePlano/DetalhePlano.ws?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/DetalhePlano/DetalhePlano.ws?WSDL"><con:part><con:url>http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/DetalhePlano/DetalhePlano.ws?WSDL</con:url><con:content><![CDATA[<definitions targetNamespace="ld:logical/DetalhePlano/DetalhePlano_ws" name="DetalhePlano" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="ld:logical/DetalhePlano/DetalhePlano_ws" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <documentation>AquaLogic Data Services Web Service</documentation>
+  <types>
+    <xs:schema targetNamespace="ld:logical/DetalhePlano/DetalhePlano_ws" elementFormDefault="qualified" xmlns:stns="ld:logical/DetalhePlano/DetalhePlano_ws" xmlns:dsns0="http://www.vivo.com.br/nfo/catalogoPRS">
+      <xs:import namespace="http://www.vivo.com.br/nfo/catalogoPRS"/>
+      <xs:element name="buscarDetalhePlano">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="paramXML">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="dsns0:ParamBuscarDetalhePlano"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="buscarDetalhePlanoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dsns0:RetornoDetalhePlano"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="PaginacaoOut">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="paginaAtual" type="xsd:int"/>
+            <xsd:element name="totalRegistros" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="FN_DETALHE_PLANO_OUT">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="IDPLANO" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="NMCOMERCIAL" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="VALORASSINATURAMENSAL" type="xsd:double" minOccurs="0"/>
+            <xsd:element name="QTMINFRANQUIA" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="DESCRICAO" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="INDISPONIVEL" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="INDTITDEP" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="IDPLANOREL" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="QTDEMAXDEPENDCATALOGO" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="INDAPROVISIONA" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="INDRESTRICAOEQUIP" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="CDSERVICETYPECODE" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="IDSISTEMA" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="TECNOLOGIAS_JOIN" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="NMTIPOPLANO" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="SGTIPOPLANO" type="xsd:string" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified">
+      <xs:element name="FN_DETALHE_PLANO_SRVMEMBRO_POS_OUT">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="IDSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="NMCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDANATEL" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSCTIPOSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDSERVICETYPECODE" type="xs:string" minOccurs="0"/>
+            <xs:element name="INDISPONIVEL" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDTIPOSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="INDAPROVISIONA" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDCLASSIFICACAOPLSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="IDSISTEMA" type="xs:long" minOccurs="0"/>
+            <xs:element name="CDCODIGO" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDCATEGORIA" type="xs:long" minOccurs="0"/>
+            <xs:element name="NMCATEGORIA" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDSERVICOPAI" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified">
+      <xs:element name="FN_DETALHE_PLANO_SRV_OUT">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="IDSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="NMCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDANATEL" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSCTIPOSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDSERVICETYPECODE" type="xs:string" minOccurs="0"/>
+            <xs:element name="INDISPONIVEL" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDTIPOSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="INDAPROVISIONA" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDCLASSIFICACAOPLSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="IDSISTEMA" type="xs:long" minOccurs="0"/>
+            <xs:element name="CDCODIGO" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDCATEGORIA" type="xs:long" minOccurs="0"/>
+            <xs:element name="NMCATEGORIA" type="xs:string" minOccurs="0"/>
+            <xs:element name="QTDMAXATIVCATALOGO" type="xs:long" minOccurs="0"/>
+            <xs:element name="QTDMINATIVCATALOGO" type="xs:long" minOccurs="0"/>
+            <xs:element minOccurs="0" name="CDPERIODICIDADE" type="xs:string"/>
+            <xs:element minOccurs="0" name="QTDEFIDELIDADE" type="xs:integer"/>
+            <xs:element minOccurs="0" name="QTDECARENCIA" type="xs:integer"/>
+            <xs:element minOccurs="0" name="INDEXPIRACAOAUT" type="xs:string"/>
+            <xs:element minOccurs="0" name="DIASEXPIRACAO" type="xs:integer"/>
+            <xs:element name="CDSERVICOPAI" type="xs:string" minOccurs="0"/>
+            <xs:element name="TPRELACIONAMENTO" type="xs:string" minOccurs="0"/>
+            <xs:element name="INATRIBUTOESPECIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="INDATRIBOBRIGATORIO" type="xs:string" minOccurs="0"/>
+            <xs:element name="INSTATUSANALISECREDITO" type="xs:long" minOccurs="0"/>
+            <xs:element name="REDE4G" type="xs:string" minOccurs="0"/>
+            <xs:element name="RNUM" type="xs:long" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified">
+      <xs:element name="FN_DETALHE_PLANO_SRVMEMBRO_PRE_OUT">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="IDSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="NMCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDANATEL" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSCTIPOSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDSERVICETYPECODE" type="xs:string" minOccurs="0"/>
+            <xs:element name="INDISPONIVEL" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDTIPOSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="INDAPROVISIONA" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDCLASSIFICACAOPLSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="IDSISTEMA" type="xs:long" minOccurs="0"/>
+            <xs:element name="CDCODIGO" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDCATEGORIA" type="xs:long" minOccurs="0"/>
+            <xs:element name="NMCATEGORIA" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:perfacesso="http://www.vivo.com.br/SN/CatalogoPlano" xmlns:pag="http://www.vivo.com.br/SN/CatalogoPlano" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.vivo.com.br/SN/CatalogoPlano"/>
+      <xsd:element name="ParamBuscarDetalhePlano">
+        <xsd:complexType>
+          <xsd:all>
+            <!--Obrigatorio-->
+            <xsd:element name="cdPlano" type="xsd:string"/>
+            <!--Opcionais-->
+            <xsd:element name="inVigenciaServicos" minOccurs="0" maxOccurs="1">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:integer">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                  <xsd:enumeration value="3"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element ref="perfacesso:PerfilAcesso" minOccurs="0"/>
+            <xsd:element ref="pag:PaginacaoIn" minOccurs="0"/>
+            <xsd:element name="idCategoria" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="nmComercial" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="sgCSA" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="indRetornoListas" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:integer">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                  <xsd:enumeration value="3"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="idTecnologia" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="sgTpAssinatura" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="idPlataforma" type="xsd:long"/>
+            <xsd:element name="DDD" minOccurs="0" type="xsd:long"/>
+            <xsd:element name="idTipoCliente" minOccurs="0" type="xsd:long"/>
+            <xsd:element name="idCanalAtendimento" minOccurs="0" type="xsd:long"/>
+            <xsd:element name="cdAnaliseCredito" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="inStatusAnaliseCredito" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:integer">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                  <xsd:enumeration value="3"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="sgUF" minOccurs="0" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="sgCarteira" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="sgSegmento" type="xsd:string"/>
+            <xsd:element name="rede4G" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="S"/>
+                  <xsd:enumeration value="N"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano">
+      <xs:element name="FN_OBTEM_TARIFA_SERVICO">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DSCTARIFA" type="xs:string" minOccurs="0"/>
+            <xs:element name="PRECOBASE" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="TPDEBITOTARIFA" type="xs:string" minOccurs="0"/>
+            <xs:element name="TPUNIDADETARIFA" type="xs:string" minOccurs="0"/>
+            <xs:element name="INNEGOCIAVEL" type="xs:string" minOccurs="0"/>
+            <xs:element name="VLMINNEGOCIACAO" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="VLMAXNEGOCIACAO" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="CDTPTARIFA" type="xs:string" minOccurs="0"/>
+            <xs:element name="PRECOBASEIMP" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSCCOBRANCA" type="xs:string" minOccurs="0"/>
+            <xs:element name="INDTARIFA" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDPERCOBRANCA" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="PaginacaoIn">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="itensPorPagina" type="xsd:long"/>
+            <xsd:element name="paginaSolicitada" type="xsd:long"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xs:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified">
+      <xs:element name="FN_DETALHE_PLANO_SRV_SRV_OUT">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="IDSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="NMCOMERCIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDANATEL" type="xs:string" minOccurs="0"/>
+            <xs:element name="DSCTIPOSERVICO" type="xs:string" minOccurs="0"/>
+            <xs:element name="CDSERVICETYPECODE" type="xs:string" minOccurs="0"/>
+            <xs:element name="INDISPONIVEL" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDTIPOSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="INDAPROVISIONA" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDCLASSIFICACAOPLSERVICO" type="xs:long" minOccurs="0"/>
+            <xs:element name="IDSISTEMA" type="xs:long" minOccurs="0"/>
+            <xs:element name="CDCODIGO" type="xs:string" minOccurs="0"/>
+            <xs:element name="IDCATEGORIA" type="xs:long" minOccurs="0"/>
+            <xs:element name="NMCATEGORIA" type="xs:string" minOccurs="0"/>
+            <xs:element name="QTDMAXATIVCATALOGO" type="xs:long" minOccurs="0"/>
+            <xs:element name="QTDMINATIVCATALOGO" type="xs:long" minOccurs="0"/>
+            <xs:element minOccurs="0" name="CDPERIODICIDADE" type="xs:string"/>
+            <xs:element minOccurs="0" name="QTDEFIDELIDADE" type="xs:integer"/>
+            <xs:element minOccurs="0" name="QTDECARENCIA" type="xs:integer"/>
+            <xs:element minOccurs="0" name="INDEXPIRACAOAUT" type="xs:string"/>
+            <xs:element minOccurs="0" name="DIASEXPIRACAO" type="xs:integer"/>
+            <xs:element name="CDSERVICOPAI" type="xs:string" minOccurs="0"/>
+            <xs:element name="TPRELACIONAMENTO" type="xs:string" minOccurs="0"/>
+            <xs:element name="INATRIBUTOESPECIAL" type="xs:string" minOccurs="0"/>
+            <xs:element name="INDATRIBOBRIGATORIO" type="xs:string" minOccurs="0"/>
+            <xs:element name="RNUM" type="xs:long" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS" xmlns:tns="http://www.vivo.com.br/nfo/catalogoPRS" xmlns:pag="http://www.vivo.com.br/SN/CatalogoPlano" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.vivo.com.br/SN/CatalogoPlano"/>
+      <xsd:element name="RetornoDetalhePlano">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="DetalhePlano">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="nmPlano" type="xsd:string"/>
+                  <xsd:element minOccurs="0" name="vlAssinatura" type="xsd:decimal"/>
+                  <xsd:element minOccurs="0" name="qtdFranquia" type="xsd:integer"/>
+                  <xsd:element minOccurs="0" name="dsDescricao" type="xsd:string"/>
+                  <xsd:element name="statusPlano" type="xsd:string"/>
+                  <xsd:element name="indPlanoTitDep" minOccurs="0">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="T"/>
+                        <xsd:enumeration value="D"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="cdPlanoTitDepRel" type="xsd:string" minOccurs="0"/>
+                  <xsd:element minOccurs="0" name="qtdeMaxDep" type="xsd:integer"/>
+                  <xsd:element name="indAprovisiona" minOccurs="0">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="S"/>
+                        <xsd:enumeration value="N"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="indRestricaoEquip" minOccurs="0">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="S"/>
+                        <xsd:enumeration value="N"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="idSistema" type="xsd:long"/>
+                  <xsd:element name="cdServiceTypeCode" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="ListaTecnologias">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="Tecnologia">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="idTecnologia" type="xsd:long"/>
+                              <xsd:element name="sgTecnologia" type="xsd:string"/>
+                              <xsd:element name="nmTecnologia" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="nmTipoPlano" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="sgTipoPlano" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ListaServicosMembro">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element maxOccurs="unbounded" name="ServicoMembro">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" name="idServico" type="xsd:long"/>
+                        <xsd:element minOccurs="0" name="cdServico" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="nmComercial" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="cdAnatel" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="idTipoServico" type="xsd:long"/>
+                        <xsd:element minOccurs="0" name="dsTipoServico" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="cdServiceTypeCode" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="idCategoria" type="xsd:long"/>
+                        <xsd:element minOccurs="0" name="nmCategoria" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="cdServicoPai" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="statusServico" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="idSistema" type="xsd:long"/>
+                        <xsd:element name="indAprovisiona" minOccurs="0">
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:enumeration value="S"/>
+                              <xsd:enumeration value="N"/>
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="idClassificacao">
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:long">
+                              <xsd:enumeration value="1"/>
+                              <xsd:enumeration value="2"/>
+                              <xsd:enumeration value="3"/>
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" type="tns:ListaServicos" name="ListaServicos"/>
+            <xsd:element ref="pag:PaginacaoOut" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ListaServicos">
+        <xsd:sequence>
+          <xsd:element ref="tns:Servico" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Servico">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="idServico" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="cdServico" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="nmComercial" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="cdAnatel" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="idTipoServico" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="dsTipoServico" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="cdServiceTypeCode" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="idCategoria" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="nmCategoria" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="tpRelacionamento" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="cdServicoPai" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="statusServico" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="idSistema" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="qtdeMaxAtivacoes" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="qtdeAtivacoesPadrao" type="xsd:long"/>
+            <xsd:element name="indAprovisiona" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="S"/>
+                  <xsd:enumeration value="N"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="idClassificacao">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:long">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                  <xsd:enumeration value="3"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="indAtributoEspecial" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="S"/>
+                  <xsd:enumeration value="N"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="cdPeriodicidade" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="qtdeFidelidade" type="xsd:integer"/>
+            <xsd:element minOccurs="0" name="qtdeCarencia" type="xsd:integer"/>
+            <xsd:element minOccurs="0" name="indExpiracaoAut" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="diasExpiracao" type="xsd:integer"/>
+            <xsd:element name="indAtribObrigatorio" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="S"/>
+                  <xsd:enumeration value="N"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ListaTarifa">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="Tarifa">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" name="tpTarifa" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="tarifa" type="xsd:decimal"/>
+                        <xsd:element minOccurs="0" name="tpDebito" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="unidade" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="indNegociavel" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="vlMinimoNegociacao" type="xsd:decimal"/>
+                        <xsd:element minOccurs="0" name="vlMaximoNegociacao" type="xsd:decimal"/>
+                        <xsd:element minOccurs="0" name="cdtptarifa" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="precobaseimp" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="dsccobranca" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="indtarifa" type="xsd:string"/>
+                        <xsd:element minOccurs="0" name="cdpercobranca" type="xsd:string"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element type="tns:ListaServicos" name="ListaServicosSimples"/>
+            <xsd:element type="tns:ListaServicos" name="ListaServicosMestre"/>
+            <xsd:element name="inStatusAnaliseCredito" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:integer">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                  <xsd:enumeration value="3"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="rede4G" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="S"/>
+                  <xsd:enumeration value="N"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="PerfilAcesso">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idPerfilSCA" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="idSistema" type="xsd:long" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </types>
+  <message name="buscarDetalhePlanoIn">
+    <part name="parameters" element="tns:buscarDetalhePlano"/>
+  </message>
+  <message name="buscarDetalhePlanoOut">
+    <part name="parameters" element="tns:buscarDetalhePlanoResponse"/>
+  </message>
+  <portType name="DetalhePlanoPT">
+    <operation name="buscarDetalhePlano">
+      <input message="tns:buscarDetalhePlanoIn"/>
+      <output message="tns:buscarDetalhePlanoOut"/>
+    </operation>
+  </portType>
+  <binding name="DetalhePlanoSoapBinding" type="tns:DetalhePlanoPT">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="buscarDetalhePlano">
+      <soap:operation soapAction="ld:logical/DetalhePlano/DetalhePlano_ws/buscarDetalhePlano" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="DetalhePlanoSoapService">
+    <port binding="tns:DetalhePlanoSoapBinding" name="DetalhePlanoSoapPort">
+      <soap:address location="http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/DetalhePlano/DetalhePlano.ws"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/DetalhePlano/DetalhePlano.ws</con:endpoint></con:endpoints><con:operation isOneWay="false" action="ld:logical/DetalhePlano/DetalhePlano_ws/buscarDetalhePlano" name="buscarDetalhePlano" bindingOperationName="buscarDetalhePlano" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="DetalhePlanoRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/DetalhePlano/DetalhePlano.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:det="ld:logical/DetalhePlano/DetalhePlano_ws" xmlns:cat="http://www.vivo.com.br/nfo/catalogoPRS" xmlns:cat1="http://www.vivo.com.br/SN/CatalogoPlano">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <det:buscarDetalhePlano>
+         <det:paramXML>
+            <cat:ParamBuscarDetalhePlano>
+               <cat:cdPlano>VFV APRO</cat:cdPlano>
+            </cat:ParamBuscarDetalhePlano>
+         </det:paramXML>
+      </det:buscarDetalhePlano>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:logical/DetalhePlano/DetalhePlano_ws/buscarDetalhePlano"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="DetalhePlanoTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DetalhePlanoTestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DetalhePlanoRequestTest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DetalhePlanoSoapBinding</con:interface><con:operation>buscarDetalhePlano</con:operation><con:request name="DetalhePlanoRequestTest" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/DetalhePlano/DetalhePlano.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:det="ld:logical/DetalhePlano/DetalhePlano_ws" xmlns:cat="http://www.vivo.com.br/nfo/catalogoPRS" xmlns:cat1="http://www.vivo.com.br/SN/CatalogoPlano">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <det:buscarDetalhePlano>
+         <det:paramXML>
+            <cat:ParamBuscarDetalhePlano>
+               <cat:cdPlano>VFV APRO</cat:cdPlano>
+            </cat:ParamBuscarDetalhePlano>
+         </det:paramXML>
+      </det:buscarDetalhePlano>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:logical/DetalhePlano/DetalhePlano_ws/buscarDetalhePlano"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

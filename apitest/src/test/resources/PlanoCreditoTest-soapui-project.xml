@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="PlanoCreditoTest" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="PlanoSoapBinding" type="wsdl" bindingName="{ld:logical/PlanoCredito/Plano_ws}PlanoSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/PlanoCredito/Plano.ws?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/PlanoCredito/Plano.ws?WSDL"><con:part><con:url>http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/PlanoCredito/Plano.ws?WSDL</con:url><con:content><![CDATA[<definitions targetNamespace="ld:logical/PlanoCredito/Plano_ws" name="Plano" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="ld:logical/PlanoCredito/Plano_ws" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <documentation>AquaLogic Data Services Web Service</documentation>
+  <types>
+    <xs:schema targetNamespace="ld:logical/PlanoCredito/Plano_ws" elementFormDefault="qualified" xmlns:stns="ld:logical/PlanoCredito/Plano_ws" xmlns:dsns0="http://www.vivo.com.br/nfo/catalogoPRS">
+      <xs:import namespace="http://www.vivo.com.br/nfo/catalogoPRS"/>
+      <xs:element name="buscarPlano">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="paramXML">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="dsns0:ParamBuscarPlano"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="buscarPlanoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dsns0:ListaPlanos" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:pag="http://www.vivo.com.br/SN/CatalogoPlano" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.vivo.com.br/SN/CatalogoPlano"/>
+      <xsd:element name="ListaPlanos">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Plano" maxOccurs="unbounded" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="idPlano" type="xsd:long"/>
+                  <xsd:element name="cdPlano" type="xsd:string"/>
+                  <xsd:element name="cdPlanoMaster" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="nmPlano" type="xsd:string"/>
+                  <xsd:element name="vlAssinatura" type="xsd:decimal" minOccurs="0"/>
+                  <xsd:element name="qtdFranquia" type="xsd:long" minOccurs="0"/>
+                  <xsd:element name="dsDescricao" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="statusPlano" type="xsd:string"/>
+                  <xsd:element name="cdAnatel" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="indPlanoTitDep">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="T"/>
+                        <xsd:enumeration value="D"/>
+                        <xsd:enumeration value="A"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="qtdPlanoDep" minOccurs="0" type="xsd:integer"/>
+                  <xsd:element name="cdPlanoTitDepRel" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="indAprovisiona" minOccurs="0">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="S"/>
+                        <xsd:enumeration value="N"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="indRestricaoEquip" minOccurs="0">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="S"/>
+                        <xsd:enumeration value="N"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="idSistema" type="xsd:long"/>
+                  <xsd:element name="inStatusAnaliseCredito" minOccurs="0" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:integer">
+                        <xsd:enumeration value="1"/>
+                        <xsd:enumeration value="2"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="nmTipoPlano" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="sgTipoPlano" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="rede4G" minOccurs="0">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="S"/>
+                        <xsd:enumeration value="N"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element ref="pag:PaginacaoOut" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="PaginacaoOut">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="paginaAtual" type="xsd:int"/>
+            <xsd:element name="totalRegistros" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="PaginacaoIn">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="itensPorPagina" type="xsd:long"/>
+            <xsd:element name="paginaSolicitada" type="xsd:long"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:perfacesso="http://www.vivo.com.br/SN/CatalogoPlano" xmlns:pag="http://www.vivo.com.br/SN/CatalogoPlano">
+      <xsd:import namespace="http://www.vivo.com.br/SN/CatalogoPlano"/>
+      <xsd:element name="ParamBuscarPlano">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element minOccurs="0" name="sgCSA" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="sgCarteira" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="sgSegmento" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="idTecnologia" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="dsPlano" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="sgTpAssinatura" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="cdProduto" type="xsd:string"/>
+            <xsd:element name="sgUF" type="xsd:string"/>
+            <xsd:element name="DDD" type="xsd:long"/>
+            <xsd:element name="idCanalAtendimento" type="xsd:long"/>
+            <xsd:element name="idTipoCliente" type="xsd:long"/>
+            <xsd:element name="idPlataforma" type="xsd:long"/>
+            <xsd:element name="cdPlanoCliente" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="cdTipoPlano" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:integer">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                  <xsd:enumeration value="3"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="idSistema" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="inVigencia">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:integer">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                  <xsd:enumeration value="3"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="codCorAnaliseCredito" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="inStatusAnaliseCredito" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:integer">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                  <xsd:enumeration value="3"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="rede4G" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="S"/>
+                  <xsd:enumeration value="N"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <!--Opcional-->
+            <xsd:element ref="perfacesso:PerfilAcesso" minOccurs="0"/>
+            <xsd:element ref="pag:PaginacaoIn" minOccurs="0"/>
+            <!--108943 – TIT DEP-->
+            <!--Opcional-->
+            <xsd:element name="indPlanoTitDep" minOccurs="0">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:integer">
+                  <xsd:enumeration value="1"/>
+                  <xsd:enumeration value="2"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="qtdPlanoDep" type="xsd:integer" minOccurs="0"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/nfo/catalogoPRS" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="RetornoPlano">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idPlano" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="cdAnatel" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="nmComercial" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="descricao" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="valorAssinaturaMensal" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="qtMinFranquia" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="inDisponivel" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="cdCodigo" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="cdCodigoMaster" type="xsd:string" minOccurs="0"/>
+            <!--108943 – TIT DEP-->
+            <!--Opcional-->
+            <xsd:element name="indPlanoTitDep" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="qtdPlanoDep" type="xsd:integer" minOccurs="0"/>
+            <xsd:element name="cdPlanoTitDepRel" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="indAprovisiona" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="indRestricaoEquip" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="idSistema" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="nmTipoPlano" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="sgTipoPlano" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="inStatusAnaliseCredito" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="plano4G" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="rnum" type="xsd:long" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+    <xsd:schema targetNamespace="http://www.vivo.com.br/SN/CatalogoPlano" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="PerfilAcesso">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idPerfilSCA" type="xsd:long" minOccurs="0"/>
+            <xsd:element name="idSistema" type="xsd:long" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="buscarPlanoIn">
+    <part name="parameters" element="tns:buscarPlano"/>
+  </message>
+  <message name="buscarPlanoOut">
+    <part name="parameters" element="tns:buscarPlanoResponse"/>
+  </message>
+  <portType name="PlanoPT">
+    <operation name="buscarPlano">
+      <input message="tns:buscarPlanoIn"/>
+      <output message="tns:buscarPlanoOut"/>
+    </operation>
+  </portType>
+  <binding name="PlanoSoapBinding" type="tns:PlanoPT">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="buscarPlano">
+      <soap:operation soapAction="ld:logical/PlanoCredito/Plano_ws/buscarPlano" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="PlanoSoapService">
+    <port binding="tns:PlanoSoapBinding" name="PlanoSoapPort">
+      <soap:address location="http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/PlanoCredito/Plano.ws"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/PlanoCredito/Plano.ws</con:endpoint></con:endpoints><con:operation isOneWay="false" action="ld:logical/PlanoCredito/Plano_ws/buscarPlano" name="buscarPlano" bindingOperationName="buscarPlano" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="PlanoCreditoRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/PlanoCredito/Plano.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:plan="ld:logical/PlanoCredito/Plano_ws" xmlns:cat="http://www.vivo.com.br/nfo/catalogoPRS" xmlns:cat1="http://www.vivo.com.br/SN/CatalogoPlano">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <plan:buscarPlano>
+         <plan:paramXML>
+            <cat:ParamBuscarPlano>
+               <cat:sgCSA>SPOCENTRO</cat:sgCSA>
+               <cat:sgCarteira>CF</cat:sgCarteira>
+               <cat:idTecnologia>3</cat:idTecnologia>
+               <cat:sgTpAssinatura>F</cat:sgTpAssinatura>
+               <cat:sgUF>SP</cat:sgUF>
+               <cat:DDD>11</cat:DDD>
+               <cat:idCanalAtendimento>2</cat:idCanalAtendimento>
+               <cat:idTipoCliente>1</cat:idTipoCliente>
+               <cat:idPlataforma>2</cat:idPlataforma>
+               <cat:inVigencia>1</cat:inVigencia>
+               <cat:codCorAnaliseCredito>07</cat:codCorAnaliseCredito>
+               <cat:inStatusAnaliseCredito>3</cat:inStatusAnaliseCredito>
+               <cat1:PerfilAcesso>
+                  <cat1:idPerfilSCA>1291</cat1:idPerfilSCA>
+                  <cat1:idSistema>7</cat1:idSistema>
+               </cat1:PerfilAcesso>
+               <cat1:PaginacaoIn>
+                  <cat1:itensPorPagina>30</cat1:itensPorPagina>
+                  <cat1:paginaSolicitada>1</cat1:paginaSolicitada>
+               </cat1:PaginacaoIn>
+            </cat:ParamBuscarPlano>
+         </plan:paramXML>
+      </plan:buscarPlano>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:logical/PlanoCredito/Plano_ws/buscarPlano"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="PlanoCreditoTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PlanoCreditoTestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="PlanoCreditoRequestTest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>PlanoSoapBinding</con:interface><con:operation>buscarPlano</con:operation><con:request name="PlanoCreditoRequestTest" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aldsp-soa:80/ServicosEnablementCatalogoPlanoServico/ALDSPWebService/logical/PlanoCredito/Plano.ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:plan="ld:logical/PlanoCredito/Plano_ws" xmlns:cat="http://www.vivo.com.br/nfo/catalogoPRS" xmlns:cat1="http://www.vivo.com.br/SN/CatalogoPlano">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <plan:buscarPlano>
+         <plan:paramXML>
+            <cat:ParamBuscarPlano>
+               <cat:sgCSA>SPOCENTRO</cat:sgCSA>
+               <cat:sgCarteira>CF</cat:sgCarteira>
+               <cat:idTecnologia>3</cat:idTecnologia>
+               <cat:sgTpAssinatura>F</cat:sgTpAssinatura>
+               <cat:sgUF>SP</cat:sgUF>
+               <cat:DDD>11</cat:DDD>
+               <cat:idCanalAtendimento>2</cat:idCanalAtendimento>
+               <cat:idTipoCliente>1</cat:idTipoCliente>
+               <cat:idPlataforma>2</cat:idPlataforma>
+               <cat:inVigencia>1</cat:inVigencia>
+               <cat:codCorAnaliseCredito>07</cat:codCorAnaliseCredito>
+               <cat:inStatusAnaliseCredito>3</cat:inStatusAnaliseCredito>
+               <cat1:PerfilAcesso>
+                  <cat1:idPerfilSCA>1291</cat1:idPerfilSCA>
+                  <cat1:idSistema>7</cat1:idSistema>
+               </cat1:PerfilAcesso>
+               <cat1:PaginacaoIn>
+                  <cat1:itensPorPagina>30</cat1:itensPorPagina>
+                  <cat1:paginaSolicitada>1</cat1:paginaSolicitada>
+               </cat1:PaginacaoIn>
+            </cat:ParamBuscarPlano>
+         </plan:paramXML>
+      </plan:buscarPlano>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="ld:logical/PlanoCredito/Plano_ws/buscarPlano"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
