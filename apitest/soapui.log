@@ -1,155 +1,155 @@
-2015-03-24 14:01:23,789 WARN  [SoapUI] Missing folder [C:\catalogo\workspace\apitest\.\ext] for external libraries
-2015-03-24 14:01:23,936 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\gmuniz\soapui-settings.xml]
-2015-03-24 14:01:24,294 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/DescontoFixaTest-soapui-project.xml]
-2015-03-24 14:01:24,294 WARN  [WsdlProject] Project 'DescontoFixaTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:24,516 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [DescontoFixaTest]
-2015-03-24 14:01:24,516 INFO  [SoapUITestCaseRunner] Running Project [DescontoFixaTest], runType = SEQUENTIAL
-2015-03-24 14:01:24,524 INFO  [SoapUITestCaseRunner] Running soapUI testcase [DescontoFixaTestCase]
-2015-03-24 14:01:24,528 INFO  [SoapUITestCaseRunner] running step [DescontoFixaRequestTest]
-2015-03-24 14:01:24,783 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/xop.xsd with targetNamespace http://www.w3.org/2004/08/xop/include
-2015-03-24 14:01:24,793 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/XMLSchema.xsd with targetNamespace http://www.w3.org/2001/XMLSchema
-2015-03-24 14:01:24,793 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/xml.xsd with targetNamespace http://www.w3.org/XML/1998/namespace
-2015-03-24 14:01:24,794 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/swaref.xsd with targetNamespace http://ws-i.org/profiles/basic/1.1/xsd
-2015-03-24 14:01:24,798 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/xmime200505.xsd with targetNamespace http://www.w3.org/2005/05/xmlmime
-2015-03-24 14:01:24,798 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/xmime200411.xsd with targetNamespace http://www.w3.org/2004/11/xmlmime
-2015-03-24 14:01:24,801 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/soapEnvelope.xsd with targetNamespace http://schemas.xmlsoap.org/soap/envelope/
-2015-03-24 14:01:24,802 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/soapEncoding.xsd with targetNamespace http://schemas.xmlsoap.org/soap/encoding/
-2015-03-24 14:01:24,802 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/soapEnvelope12.xsd with targetNamespace http://www.w3.org/2003/05/soap-envelope
-2015-03-24 14:01:24,803 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/soapEncoding12.xsd with targetNamespace http://www.w3.org/2003/05/soap-encoding
-2015-03-24 14:01:24,804 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoFixa/DescontoFixa/logical/DescontoFixa.ws?WSDL]
-2015-03-24 14:01:24,804 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoFixa/DescontoFixa/logical/DescontoFixa.ws?WSDL
-2015-03-24 14:01:24,916 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:24,916 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:24,916 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:24,917 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [DescontoFixaTestCase], time taken: 384ms, status: FINISHED
-2015-03-24 14:01:24,917 INFO  [SoapUITestCaseRunner] Project [DescontoFixaTest] finished with status [FINISHED] in 398ms
-2015-03-24 14:01:24,918 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/DetalheOfertaLinhaFixaResTest-soapui-project.xml]
-2015-03-24 14:01:24,918 WARN  [WsdlProject] Project 'DetalheOfertaLinhaFixaResTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:24,919 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [DetalheOfertaLinhaFixaResTest]
-2015-03-24 14:01:24,919 INFO  [SoapUITestCaseRunner] Running Project [DetalheOfertaLinhaFixaResTest], runType = SEQUENTIAL
-2015-03-24 14:01:24,919 INFO  [SoapUITestCaseRunner] Running soapUI testcase [DetalheOfertaLinhaFixaResTestCase]
-2015-03-24 14:01:24,920 INFO  [SoapUITestCaseRunner] running step [DetalheOfertaLinhaFixaResRequestTest]
-2015-03-24 14:01:25,007 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/DetalheOfertaLinhaFixaRes/logical/DetalheOfertaLinhaFixaRes.ws?WSDL]
-2015-03-24 14:01:25,007 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/DetalheOfertaLinhaFixaRes/logical/DetalheOfertaLinhaFixaRes.ws?WSDL
-2015-03-24 14:01:25,054 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:25,054 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:25,054 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:25,054 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [DetalheOfertaLinhaFixaResTestCase], time taken: 134ms, status: FINISHED
-2015-03-24 14:01:25,054 INFO  [SoapUITestCaseRunner] Project [DetalheOfertaLinhaFixaResTest] finished with status [FINISHED] in 135ms
-2015-03-24 14:01:25,055 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/DetalhePlanoTest-soapui-project.xml]
-2015-03-24 14:01:25,055 WARN  [WsdlProject] Project 'DetalhePlanoTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:25,056 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [DetalhePlanoTest]
-2015-03-24 14:01:25,056 INFO  [SoapUITestCaseRunner] Running Project [DetalhePlanoTest], runType = SEQUENTIAL
-2015-03-24 14:01:25,057 INFO  [SoapUITestCaseRunner] Running soapUI testcase [DetalhePlanoTestCase]
-2015-03-24 14:01:25,057 INFO  [SoapUITestCaseRunner] running step [DetalhePlanoRequestTest]
-2015-03-24 14:01:27,204 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/DetalhePlano/DetalhePlano.ws?WSDL]
-2015-03-24 14:01:27,204 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/DetalhePlano/DetalhePlano.ws?WSDL
-2015-03-24 14:01:27,384 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:27,384 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:27,384 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:27,384 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [DetalhePlanoTestCase], time taken: 2327ms, status: FINISHED
-2015-03-24 14:01:27,384 INFO  [SoapUITestCaseRunner] Project [DetalhePlanoTest] finished with status [FINISHED] in 2328ms
-2015-03-24 14:01:27,386 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/DetalheSrvAdicionalFixaTest-soapui-project.xml]
-2015-03-24 14:01:27,386 WARN  [WsdlProject] Project 'DetalheSrvAdicionalFixaTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:27,387 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [DetalheSrvAdicionalFixaTest]
-2015-03-24 14:01:27,387 INFO  [SoapUITestCaseRunner] Running Project [DetalheSrvAdicionalFixaTest], runType = SEQUENTIAL
-2015-03-24 14:01:27,387 INFO  [SoapUITestCaseRunner] Running soapUI testcase [DetalheSrvAdicionalFixaTestCase]
-2015-03-24 14:01:27,387 INFO  [SoapUITestCaseRunner] running step [DetalheSrvAdicionalFixaRequestTest]
-2015-03-24 14:01:27,511 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/DetalheSrvAdicionalFixa/logical/DetalheSrvAdicionalFixa.ws?WSDL]
-2015-03-24 14:01:27,511 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/DetalheSrvAdicionalFixa/logical/DetalheSrvAdicionalFixa.ws?WSDL
-2015-03-24 14:01:27,543 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:27,543 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:27,543 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:27,543 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [DetalheSrvAdicionalFixaTestCase], time taken: 155ms, status: FINISHED
-2015-03-24 14:01:27,543 INFO  [SoapUITestCaseRunner] Project [DetalheSrvAdicionalFixaTest] finished with status [FINISHED] in 156ms
-2015-03-24 14:01:27,544 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/GerenciadorRegrasFixaTest-soapui-project.xml]
-2015-03-24 14:01:27,544 WARN  [WsdlProject] Project 'GerenciadorRegrasFixaTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:27,545 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [GerenciadorRegrasFixaTest]
-2015-03-24 14:01:27,545 INFO  [SoapUITestCaseRunner] Running Project [GerenciadorRegrasFixaTest], runType = SEQUENTIAL
-2015-03-24 14:01:27,546 INFO  [SoapUITestCaseRunner] Running soapUI testcase [GerenciadorRegrasFixaTestCase]
-2015-03-24 14:01:27,546 INFO  [SoapUITestCaseRunner] running step [GerenciadorRegrasFixaRequestTest]
-2015-03-24 14:01:27,616 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/GerenciadorRegrasFixa/logical/GerenciadorRegrasFixa.ws?WSDL]
-2015-03-24 14:01:27,617 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/GerenciadorRegrasFixa/logical/GerenciadorRegrasFixa.ws?WSDL
-2015-03-24 14:01:27,656 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:27,656 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:27,656 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:27,656 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [GerenciadorRegrasFixaTestCase], time taken: 109ms, status: FINISHED
-2015-03-24 14:01:27,656 INFO  [SoapUITestCaseRunner] Project [GerenciadorRegrasFixaTest] finished with status [FINISHED] in 111ms
-2015-03-24 14:01:27,658 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/MatrizOfertaV2Test-soapui-project.xml]
-2015-03-24 14:01:27,658 WARN  [WsdlProject] Project 'MatrizOfertaV2Test' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:27,659 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [MatrizOfertaV2Test]
-2015-03-24 14:01:27,659 INFO  [SoapUITestCaseRunner] Running Project [MatrizOfertaV2Test], runType = SEQUENTIAL
-2015-03-24 14:01:27,659 INFO  [SoapUITestCaseRunner] Running soapUI testcase [MatrizOfertaV2TestCase]
-2015-03-24 14:01:27,660 INFO  [SoapUITestCaseRunner] running step [MatrizOfertaV2RequestTest]
-2015-03-24 14:01:28,227 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoMatrizOferta/logical/MatrizOfertaV2/BuscarCatalogoMatrizOferta.ws?WSDL]
-2015-03-24 14:01:28,227 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoMatrizOferta/logical/MatrizOfertaV2/BuscarCatalogoMatrizOferta.ws?WSDL
-2015-03-24 14:01:28,267 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:28,267 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:28,267 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:28,267 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [MatrizOfertaV2TestCase], time taken: 607ms, status: FINISHED
-2015-03-24 14:01:28,267 INFO  [SoapUITestCaseRunner] Project [MatrizOfertaV2Test] finished with status [FINISHED] in 608ms
-2015-03-24 14:01:28,268 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/PlanoCreditoTest-soapui-project.xml]
-2015-03-24 14:01:28,268 WARN  [WsdlProject] Project 'PlanoCreditoTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:28,269 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [PlanoCreditoTest]
-2015-03-24 14:01:28,269 INFO  [SoapUITestCaseRunner] Running Project [PlanoCreditoTest], runType = SEQUENTIAL
-2015-03-24 14:01:28,270 INFO  [SoapUITestCaseRunner] Running soapUI testcase [PlanoCreditoTestCase]
-2015-03-24 14:01:28,270 INFO  [SoapUITestCaseRunner] running step [PlanoCreditoRequestTest]
-2015-03-24 14:01:28,926 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/PlanoCredito/Plano.ws?WSDL]
-2015-03-24 14:01:28,926 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/PlanoCredito/Plano.ws?WSDL
-2015-03-24 14:01:28,980 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:28,980 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:28,980 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:28,980 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [PlanoCreditoTestCase], time taken: 709ms, status: FINISHED
-2015-03-24 14:01:28,980 INFO  [SoapUITestCaseRunner] Project [PlanoCreditoTest] finished with status [FINISHED] in 711ms
-2015-03-24 14:01:28,981 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/ResumoOfertaLinhaFixaResTest-soapui-project.xml]
-2015-03-24 14:01:28,981 WARN  [WsdlProject] Project 'ResumoOfertaLinhaFixaResTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:28,982 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [ResumoOfertaLinhaFixaResTest]
-2015-03-24 14:01:28,982 INFO  [SoapUITestCaseRunner] Running Project [ResumoOfertaLinhaFixaResTest], runType = SEQUENTIAL
-2015-03-24 14:01:28,983 INFO  [SoapUITestCaseRunner] Running soapUI testcase [ResumoOfertaLinhaFixaResTestCase]
-2015-03-24 14:01:28,983 INFO  [SoapUITestCaseRunner] running step [ResumoOfertaLinhaFixaResRequestTest]
-2015-03-24 14:01:29,021 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws?WSDL]
-2015-03-24 14:01:29,022 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws?WSDL
-2015-03-24 14:01:29,039 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:29,039 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:29,039 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:29,039 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [ResumoOfertaLinhaFixaResTestCase], time taken: 56ms, status: FINISHED
-2015-03-24 14:01:29,039 INFO  [SoapUITestCaseRunner] Project [ResumoOfertaLinhaFixaResTest] finished with status [FINISHED] in 57ms
-2015-03-24 14:01:29,040 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/ResumoSrvAdicLinhaFixaResTest-soapui-project.xml]
-2015-03-24 14:01:29,041 WARN  [WsdlProject] Project 'ResumoSrvAdicLinhaFixaResTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:29,041 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [ResumoSrvAdicLinhaFixaResTest]
-2015-03-24 14:01:29,041 INFO  [SoapUITestCaseRunner] Running Project [ResumoSrvAdicLinhaFixaResTest], runType = SEQUENTIAL
-2015-03-24 14:01:29,042 INFO  [SoapUITestCaseRunner] Running soapUI testcase [ResumoSrvAdicLinhaFixaResTestCase]
-2015-03-24 14:01:29,042 INFO  [SoapUITestCaseRunner] running step [ResumoSrvAdicLinhaFixaResRequestTest]
-2015-03-24 14:01:29,215 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoSrvAdicLinhaFixaRes/logical/ResumoSrvAdicLinhaFixaRes.ws?WSDL]
-2015-03-24 14:01:29,216 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoSrvAdicLinhaFixaRes/logical/ResumoSrvAdicLinhaFixaRes.ws?WSDL
-2015-03-24 14:01:29,265 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:29,266 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:29,266 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:29,266 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [ResumoSrvAdicLinhaFixaResTestCase], time taken: 223ms, status: FINISHED
-2015-03-24 14:01:29,266 INFO  [SoapUITestCaseRunner] Project [ResumoSrvAdicLinhaFixaResTest] finished with status [FINISHED] in 225ms
-2015-03-24 14:01:29,268 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/ServicoFixaTest-soapui-project.xml]
-2015-03-24 14:01:29,268 WARN  [WsdlProject] Project 'ServicoFixaTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:29,269 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [ServicoFixaTest]
-2015-03-24 14:01:29,269 INFO  [SoapUITestCaseRunner] Running Project [ServicoFixaTest], runType = SEQUENTIAL
-2015-03-24 14:01:29,270 INFO  [SoapUITestCaseRunner] Running soapUI testcase [ServicoFixaTestCase]
-2015-03-24 14:01:29,270 INFO  [SoapUITestCaseRunner] running step [ServicoFixaRequestTest]
-2015-03-24 14:01:29,329 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoFixa/ServicoFixa/logical/ServicoFixa.ws?WSDL]
-2015-03-24 14:01:29,329 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoFixa/ServicoFixa/logical/ServicoFixa.ws?WSDL
-2015-03-24 14:01:29,370 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:29,370 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:29,370 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:29,370 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [ServicoFixaTestCase], time taken: 99ms, status: FINISHED
-2015-03-24 14:01:29,371 INFO  [SoapUITestCaseRunner] Project [ServicoFixaTest] finished with status [FINISHED] in 102ms
-2015-03-24 14:01:29,371 INFO  [WsdlProject] Loaded project from [file:/C:/catalogo/workspace/apitest/target/test-classes/VoipTest-soapui-project.xml]
-2015-03-24 14:01:29,372 WARN  [WsdlProject] Project 'VoipTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
-2015-03-24 14:01:29,372 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [VoipTest]
-2015-03-24 14:01:29,372 INFO  [SoapUITestCaseRunner] Running Project [VoipTest], runType = SEQUENTIAL
-2015-03-24 14:01:29,373 INFO  [SoapUITestCaseRunner] Running soapUI testcase [VoipTestCase]
-2015-03-24 14:01:29,373 INFO  [SoapUITestCaseRunner] running step [VoipRequestTest]
-2015-03-24 14:01:30,341 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/Voip/Voip.ws?WSDL]
-2015-03-24 14:01:30,341 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/Voip/Voip.ws?WSDL
-2015-03-24 14:01:30,473 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2015-03-24 14:01:30,473 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
-2015-03-24 14:01:30,473 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2015-03-24 14:01:30,473 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [VoipTestCase], time taken: 1099ms, status: FINISHED
-2015-03-24 14:01:30,473 INFO  [SoapUITestCaseRunner] Project [VoipTest] finished with status [FINISHED] in 1101ms
+2015-03-24 17:16:59,666 WARN  [SoapUI] Missing folder [C:\Users\gmuniz\git\repository\apitest\.\ext] for external libraries
+2015-03-24 17:16:59,839 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\gmuniz\soapui-settings.xml]
+2015-03-24 17:17:00,251 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/DescontoFixaTest-soapui-project.xml]
+2015-03-24 17:17:00,252 WARN  [WsdlProject] Project 'DescontoFixaTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:00,469 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [DescontoFixaTest]
+2015-03-24 17:17:00,470 INFO  [SoapUITestCaseRunner] Running Project [DescontoFixaTest], runType = SEQUENTIAL
+2015-03-24 17:17:00,477 INFO  [SoapUITestCaseRunner] Running soapUI testcase [DescontoFixaTestCase]
+2015-03-24 17:17:00,482 INFO  [SoapUITestCaseRunner] running step [DescontoFixaRequestTest]
+2015-03-24 17:17:00,790 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/xop.xsd with targetNamespace http://www.w3.org/2004/08/xop/include
+2015-03-24 17:17:00,800 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/XMLSchema.xsd with targetNamespace http://www.w3.org/2001/XMLSchema
+2015-03-24 17:17:00,801 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/xml.xsd with targetNamespace http://www.w3.org/XML/1998/namespace
+2015-03-24 17:17:00,801 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/swaref.xsd with targetNamespace http://ws-i.org/profiles/basic/1.1/xsd
+2015-03-24 17:17:00,802 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/xmime200505.xsd with targetNamespace http://www.w3.org/2005/05/xmlmime
+2015-03-24 17:17:00,802 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/xmime200411.xsd with targetNamespace http://www.w3.org/2004/11/xmlmime
+2015-03-24 17:17:00,803 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/soapEnvelope.xsd with targetNamespace http://schemas.xmlsoap.org/soap/envelope/
+2015-03-24 17:17:00,804 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/soapEncoding.xsd with targetNamespace http://schemas.xmlsoap.org/soap/encoding/
+2015-03-24 17:17:00,805 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/soapEnvelope12.xsd with targetNamespace http://www.w3.org/2003/05/soap-envelope
+2015-03-24 17:17:00,807 INFO  [SchemaUtils] Added default schema from file:/C:/Users/gmuniz/.m2/repository/eviware/soapui/4.5.1/soapui-4.5.1.jar!/com/eviware/soapui/resources/xsds/soapEncoding12.xsd with targetNamespace http://www.w3.org/2003/05/soap-encoding
+2015-03-24 17:17:00,807 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoFixa/DescontoFixa/logical/DescontoFixa.ws?WSDL]
+2015-03-24 17:17:00,807 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoFixa/DescontoFixa/logical/DescontoFixa.ws?WSDL
+2015-03-24 17:17:00,928 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:00,928 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:00,928 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:00,928 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [DescontoFixaTestCase], time taken: 442ms, status: FINISHED
+2015-03-24 17:17:00,928 INFO  [SoapUITestCaseRunner] Project [DescontoFixaTest] finished with status [FINISHED] in 455ms
+2015-03-24 17:17:00,930 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/DetalheOfertaLinhaFixaResTest-soapui-project.xml]
+2015-03-24 17:17:00,930 WARN  [WsdlProject] Project 'DetalheOfertaLinhaFixaResTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:00,931 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [DetalheOfertaLinhaFixaResTest]
+2015-03-24 17:17:00,931 INFO  [SoapUITestCaseRunner] Running Project [DetalheOfertaLinhaFixaResTest], runType = SEQUENTIAL
+2015-03-24 17:17:00,931 INFO  [SoapUITestCaseRunner] Running soapUI testcase [DetalheOfertaLinhaFixaResTestCase]
+2015-03-24 17:17:00,931 INFO  [SoapUITestCaseRunner] running step [DetalheOfertaLinhaFixaResRequestTest]
+2015-03-24 17:17:00,982 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/DetalheOfertaLinhaFixaRes/logical/DetalheOfertaLinhaFixaRes.ws?WSDL]
+2015-03-24 17:17:00,982 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/DetalheOfertaLinhaFixaRes/logical/DetalheOfertaLinhaFixaRes.ws?WSDL
+2015-03-24 17:17:01,025 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:01,025 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:01,025 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:01,025 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [DetalheOfertaLinhaFixaResTestCase], time taken: 93ms, status: FINISHED
+2015-03-24 17:17:01,025 INFO  [SoapUITestCaseRunner] Project [DetalheOfertaLinhaFixaResTest] finished with status [FINISHED] in 94ms
+2015-03-24 17:17:01,026 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/DetalhePlanoTest-soapui-project.xml]
+2015-03-24 17:17:01,026 WARN  [WsdlProject] Project 'DetalhePlanoTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:01,027 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [DetalhePlanoTest]
+2015-03-24 17:17:01,027 INFO  [SoapUITestCaseRunner] Running Project [DetalhePlanoTest], runType = SEQUENTIAL
+2015-03-24 17:17:01,027 INFO  [SoapUITestCaseRunner] Running soapUI testcase [DetalhePlanoTestCase]
+2015-03-24 17:17:01,027 INFO  [SoapUITestCaseRunner] running step [DetalhePlanoRequestTest]
+2015-03-24 17:17:02,446 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/DetalhePlano/DetalhePlano.ws?WSDL]
+2015-03-24 17:17:02,446 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/DetalhePlano/DetalhePlano.ws?WSDL
+2015-03-24 17:17:02,619 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:02,619 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:02,620 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:02,620 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [DetalhePlanoTestCase], time taken: 1592ms, status: FINISHED
+2015-03-24 17:17:02,620 INFO  [SoapUITestCaseRunner] Project [DetalhePlanoTest] finished with status [FINISHED] in 1593ms
+2015-03-24 17:17:02,621 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/DetalheSrvAdicionalFixaTest-soapui-project.xml]
+2015-03-24 17:17:02,621 WARN  [WsdlProject] Project 'DetalheSrvAdicionalFixaTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:02,622 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [DetalheSrvAdicionalFixaTest]
+2015-03-24 17:17:02,622 INFO  [SoapUITestCaseRunner] Running Project [DetalheSrvAdicionalFixaTest], runType = SEQUENTIAL
+2015-03-24 17:17:02,622 INFO  [SoapUITestCaseRunner] Running soapUI testcase [DetalheSrvAdicionalFixaTestCase]
+2015-03-24 17:17:02,623 INFO  [SoapUITestCaseRunner] running step [DetalheSrvAdicionalFixaRequestTest]
+2015-03-24 17:17:02,733 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/DetalheSrvAdicionalFixa/logical/DetalheSrvAdicionalFixa.ws?WSDL]
+2015-03-24 17:17:02,733 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/DetalheSrvAdicionalFixa/logical/DetalheSrvAdicionalFixa.ws?WSDL
+2015-03-24 17:17:02,775 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:02,775 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:02,775 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:02,775 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [DetalheSrvAdicionalFixaTestCase], time taken: 151ms, status: FINISHED
+2015-03-24 17:17:02,775 INFO  [SoapUITestCaseRunner] Project [DetalheSrvAdicionalFixaTest] finished with status [FINISHED] in 153ms
+2015-03-24 17:17:02,777 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/GerenciadorRegrasFixaTest-soapui-project.xml]
+2015-03-24 17:17:02,777 WARN  [WsdlProject] Project 'GerenciadorRegrasFixaTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:02,778 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [GerenciadorRegrasFixaTest]
+2015-03-24 17:17:02,778 INFO  [SoapUITestCaseRunner] Running Project [GerenciadorRegrasFixaTest], runType = SEQUENTIAL
+2015-03-24 17:17:02,779 INFO  [SoapUITestCaseRunner] Running soapUI testcase [GerenciadorRegrasFixaTestCase]
+2015-03-24 17:17:02,779 INFO  [SoapUITestCaseRunner] running step [GerenciadorRegrasFixaRequestTest]
+2015-03-24 17:17:02,867 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/GerenciadorRegrasFixa/logical/GerenciadorRegrasFixa.ws?WSDL]
+2015-03-24 17:17:02,867 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/GerenciadorRegrasFixa/logical/GerenciadorRegrasFixa.ws?WSDL
+2015-03-24 17:17:02,919 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:02,919 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:02,919 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:02,919 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [GerenciadorRegrasFixaTestCase], time taken: 140ms, status: FINISHED
+2015-03-24 17:17:02,920 INFO  [SoapUITestCaseRunner] Project [GerenciadorRegrasFixaTest] finished with status [FINISHED] in 142ms
+2015-03-24 17:17:02,921 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/MatrizOfertaV2Test-soapui-project.xml]
+2015-03-24 17:17:02,921 WARN  [WsdlProject] Project 'MatrizOfertaV2Test' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:02,922 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [MatrizOfertaV2Test]
+2015-03-24 17:17:02,922 INFO  [SoapUITestCaseRunner] Running Project [MatrizOfertaV2Test], runType = SEQUENTIAL
+2015-03-24 17:17:02,923 INFO  [SoapUITestCaseRunner] Running soapUI testcase [MatrizOfertaV2TestCase]
+2015-03-24 17:17:02,923 INFO  [SoapUITestCaseRunner] running step [MatrizOfertaV2RequestTest]
+2015-03-24 17:17:03,420 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoMatrizOferta/logical/MatrizOfertaV2/BuscarCatalogoMatrizOferta.ws?WSDL]
+2015-03-24 17:17:03,420 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoMatrizOferta/logical/MatrizOfertaV2/BuscarCatalogoMatrizOferta.ws?WSDL
+2015-03-24 17:17:03,462 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:03,462 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:03,462 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:03,462 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [MatrizOfertaV2TestCase], time taken: 539ms, status: FINISHED
+2015-03-24 17:17:03,462 INFO  [SoapUITestCaseRunner] Project [MatrizOfertaV2Test] finished with status [FINISHED] in 540ms
+2015-03-24 17:17:03,463 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/PlanoCreditoTest-soapui-project.xml]
+2015-03-24 17:17:03,463 WARN  [WsdlProject] Project 'PlanoCreditoTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:03,464 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [PlanoCreditoTest]
+2015-03-24 17:17:03,464 INFO  [SoapUITestCaseRunner] Running Project [PlanoCreditoTest], runType = SEQUENTIAL
+2015-03-24 17:17:03,464 INFO  [SoapUITestCaseRunner] Running soapUI testcase [PlanoCreditoTestCase]
+2015-03-24 17:17:03,465 INFO  [SoapUITestCaseRunner] running step [PlanoCreditoRequestTest]
+2015-03-24 17:17:04,117 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/PlanoCredito/Plano.ws?WSDL]
+2015-03-24 17:17:04,117 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/PlanoCredito/Plano.ws?WSDL
+2015-03-24 17:17:04,166 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:04,166 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:04,166 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:04,166 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [PlanoCreditoTestCase], time taken: 701ms, status: FINISHED
+2015-03-24 17:17:04,166 INFO  [SoapUITestCaseRunner] Project [PlanoCreditoTest] finished with status [FINISHED] in 702ms
+2015-03-24 17:17:04,167 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/ResumoOfertaLinhaFixaResTest-soapui-project.xml]
+2015-03-24 17:17:04,167 WARN  [WsdlProject] Project 'ResumoOfertaLinhaFixaResTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:04,168 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [ResumoOfertaLinhaFixaResTest]
+2015-03-24 17:17:04,168 INFO  [SoapUITestCaseRunner] Running Project [ResumoOfertaLinhaFixaResTest], runType = SEQUENTIAL
+2015-03-24 17:17:04,169 INFO  [SoapUITestCaseRunner] Running soapUI testcase [ResumoOfertaLinhaFixaResTestCase]
+2015-03-24 17:17:04,169 INFO  [SoapUITestCaseRunner] running step [ResumoOfertaLinhaFixaResRequestTest]
+2015-03-24 17:17:04,201 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws?WSDL]
+2015-03-24 17:17:04,201 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoOfertaLinhaFixaRes/logical/ResumoOfertaLinhaFixaRes.ws?WSDL
+2015-03-24 17:17:04,218 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:04,218 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:04,218 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:04,219 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [ResumoOfertaLinhaFixaResTestCase], time taken: 48ms, status: FINISHED
+2015-03-24 17:17:04,219 INFO  [SoapUITestCaseRunner] Project [ResumoOfertaLinhaFixaResTest] finished with status [FINISHED] in 51ms
+2015-03-24 17:17:04,219 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/ResumoSrvAdicLinhaFixaResTest-soapui-project.xml]
+2015-03-24 17:17:04,220 WARN  [WsdlProject] Project 'ResumoSrvAdicLinhaFixaResTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:04,220 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [ResumoSrvAdicLinhaFixaResTest]
+2015-03-24 17:17:04,220 INFO  [SoapUITestCaseRunner] Running Project [ResumoSrvAdicLinhaFixaResTest], runType = SEQUENTIAL
+2015-03-24 17:17:04,221 INFO  [SoapUITestCaseRunner] Running soapUI testcase [ResumoSrvAdicLinhaFixaResTestCase]
+2015-03-24 17:17:04,221 INFO  [SoapUITestCaseRunner] running step [ResumoSrvAdicLinhaFixaResRequestTest]
+2015-03-24 17:17:04,322 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoSrvAdicLinhaFixaRes/logical/ResumoSrvAdicLinhaFixaRes.ws?WSDL]
+2015-03-24 17:17:04,322 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoLinhaFixa/ResumoSrvAdicLinhaFixaRes/logical/ResumoSrvAdicLinhaFixaRes.ws?WSDL
+2015-03-24 17:17:04,360 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:04,360 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:04,360 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:04,360 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [ResumoSrvAdicLinhaFixaResTestCase], time taken: 139ms, status: FINISHED
+2015-03-24 17:17:04,360 INFO  [SoapUITestCaseRunner] Project [ResumoSrvAdicLinhaFixaResTest] finished with status [FINISHED] in 140ms
+2015-03-24 17:17:04,361 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/ServicoFixaTest-soapui-project.xml]
+2015-03-24 17:17:04,361 WARN  [WsdlProject] Project 'ServicoFixaTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:04,362 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [ServicoFixaTest]
+2015-03-24 17:17:04,362 INFO  [SoapUITestCaseRunner] Running Project [ServicoFixaTest], runType = SEQUENTIAL
+2015-03-24 17:17:04,363 INFO  [SoapUITestCaseRunner] Running soapUI testcase [ServicoFixaTestCase]
+2015-03-24 17:17:04,363 INFO  [SoapUITestCaseRunner] running step [ServicoFixaRequestTest]
+2015-03-24 17:17:04,388 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoFixa/ServicoFixa/logical/ServicoFixa.ws?WSDL]
+2015-03-24 17:17:04,388 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoFixa/ServicoFixa/logical/ServicoFixa.ws?WSDL
+2015-03-24 17:17:04,406 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:04,407 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:04,407 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:04,407 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [ServicoFixaTestCase], time taken: 43ms, status: FINISHED
+2015-03-24 17:17:04,407 INFO  [SoapUITestCaseRunner] Project [ServicoFixaTest] finished with status [FINISHED] in 45ms
+2015-03-24 17:17:04,408 INFO  [WsdlProject] Loaded project from [file:/C:/Users/gmuniz/git/repository/apitest/target/test-classes/VoipTest-soapui-project.xml]
+2015-03-24 17:17:04,408 WARN  [WsdlProject] Project 'VoipTest' is from a newer version (5.0.0) of soapUI than this (4.5.1-SNAPSHOT) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2015-03-24 17:17:04,409 INFO  [SoapUITestCaseRunner] Running soapUI tests in project [VoipTest]
+2015-03-24 17:17:04,409 INFO  [SoapUITestCaseRunner] Running Project [VoipTest], runType = SEQUENTIAL
+2015-03-24 17:17:04,410 INFO  [SoapUITestCaseRunner] Running soapUI testcase [VoipTestCase]
+2015-03-24 17:17:04,410 INFO  [SoapUITestCaseRunner] running step [VoipRequestTest]
+2015-03-24 17:17:04,846 INFO  [SchemaUtils] Loading schema types from [http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/Voip/Voip.ws?WSDL]
+2015-03-24 17:17:04,846 INFO  [SchemaUtils] Getting schema http://aldsp-soa/ServicosEnablementCatalogoPlanoServico/logical/Voip/Voip.ws?WSDL
+2015-03-24 17:17:04,876 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2015-03-24 17:17:04,876 INFO  [SoapUITestCaseRunner] Assertion [Schema Compliance] has status VALID
+2015-03-24 17:17:04,876 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2015-03-24 17:17:04,876 INFO  [SoapUITestCaseRunner] Finished running soapUI testcase [VoipTestCase], time taken: 466ms, status: FINISHED
+2015-03-24 17:17:04,876 INFO  [SoapUITestCaseRunner] Project [VoipTest] finished with status [FINISHED] in 467ms
