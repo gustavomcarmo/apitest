@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -16,6 +17,11 @@ import com.eviware.soapui.tools.SoapUITestCaseRunner;
 
 @RunWith(Parameterized.class)
 public class SoapUIProjectTest {
+	
+	@BeforeClass
+    public static void beforeClass() {
+    	System.setProperty("soapui.logroot", "target/");
+    }
 	
 	@Parameters
     public static Collection<Object[]> data() {
@@ -35,10 +41,10 @@ public class SoapUIProjectTest {
     
     @Parameter
     public String projectFile;
-	
-	@Test
+    
+    @Test
 	public void test() throws Exception {
-		SoapUITestCaseRunner runner = new SoapUITestCaseRunner();
+    	SoapUITestCaseRunner runner = new SoapUITestCaseRunner();
 		runner.setProjectFile(projectFile);
 		runner.run();
 	}
