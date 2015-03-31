@@ -17,36 +17,36 @@ import com.eviware.soapui.tools.SoapUITestCaseRunner;
 
 @RunWith(Parameterized.class)
 public class SoapUIProjectTest {
-	
+
 	@BeforeClass
-    public static void beforeClass() {
-    	System.setProperty("soapui.logroot", "target/");
-    }
-	
+	public static void beforeClass() {
+		System.setProperty("soapui.logroot", "target/");
+	}
+
 	@Parameters
-    public static Collection<Object[]> data() {
-    	final String pathname = "target/test-classes/";
-    	File resourcesDir = new File(pathname);
-    	String[] projectFiles = resourcesDir.list(new FilenameFilter() {
+	public static Collection<Object[]> data() {
+		final String pathname = "target/test-classes/";
+		File resourcesDir = new File(pathname);
+		String[] projectFiles = resourcesDir.list(new FilenameFilter() {
 			public boolean accept(File dir, String name) {
 				return name.endsWith("soapui-project.xml");
 			}
 		});
-    	List<Object[]> data = new ArrayList<Object[]>(projectFiles.length);
-    	for (String projectFile : projectFiles) {
-    		data.add(new Object[] {pathname.concat(projectFile)});
-    	}
-    	return data;
-    }
-    
-    @Parameter
-    public String projectFile;
-    
-    @Test
+		List<Object[]> data = new ArrayList<Object[]>(projectFiles.length);
+		for (String projectFile : projectFiles) {
+			data.add(new Object[] { pathname.concat(projectFile) });
+		}
+		return data;
+	}
+
+	@Parameter
+	public String projectFile;
+
+	@Test
 	public void test() throws Exception {
-    	SoapUITestCaseRunner runner = new SoapUITestCaseRunner();
+		SoapUITestCaseRunner runner = new SoapUITestCaseRunner();
 		runner.setProjectFile(projectFile);
 		runner.run();
 	}
-	
+
 }
