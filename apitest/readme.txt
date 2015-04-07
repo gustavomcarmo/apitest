@@ -19,4 +19,4 @@ control over logging can be gotten either programmatically or changing the SoapU
 configuration file soapui-4.5.1.jar\com\eviware\soapui\resources\conf\soapui-log4j.xml.
 
 SoapUI 5 projects can also be used in the test, but their XML files must be modified.
-Replace all the occurrences of the <con:authType> tag value by "Global HTTP Settings".
+Replace all the occurrences of the con:authType tag value by "Global HTTP Settings".
